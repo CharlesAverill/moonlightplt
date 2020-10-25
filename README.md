@@ -28,7 +28,7 @@ utils.center_axes()
 # Plot 2 periods of the wave (static)
 sine.plot(2)
 ```
-![Resulting plot](media/readme_sine_wave.png)
+![Resulting plot](https://raw.githubusercontent.com/CharlesAverill/moonlight/main/media/readme_sine_wave.png)
 
 ## Supported Waves
 - `waves.Sine`

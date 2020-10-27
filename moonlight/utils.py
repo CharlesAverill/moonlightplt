@@ -1,10 +1,15 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from .waves import Wave
 
 
 def __lcm__(a, b):
     from fractions import gcd
     return a * b / gcd(a, b)
+
+
+def _check_type(other):
+    return Wave.Wave in type(other).__bases__ or type(other) is Wave.Wave
 
 
 def x_range(minimum: float,

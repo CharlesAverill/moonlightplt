@@ -30,11 +30,23 @@ sine.plot(2)
 ```
 ![Resulting plot](https://raw.githubusercontent.com/CharlesAverill/moonlight/main/media/readme_sine_wave.png)
 
+### Animation
+Waves can also be animated! Just replace `<wave_object>.plot()` with `<wave_object>.animate()`!
+#### `animate` parameters
+- `speed` - The speed at which the animation will play. Some waves have their default speed adjusted
+so that animation can be seen easily. 
+    - When combining a `Square` or `Sawtooth` wave with 
+    a `Sine` or `Cosine` wave, the sum of the functions naturally grows at an incredibly slow rate, so `speed`
+    should be set to a multiple of `10**14` to be able to view animations properly.
+- `line_width` - Sets line width
+
+
 ## Supported Waves
-- `waves.Sine`
-- `waves.Cosine`
-- `waves.Tangent`
-- `waves.Wave` - This is a parent class for the 
+- `Sine`
+- `Cosine`
+- `Square`
+- `Sawtooth`
+- `Wave` - This is a parent class for the 
 previous waves. Custom waves can be implemented by
 inheriting this class.
 
@@ -42,7 +54,7 @@ inheriting this class.
 - `amplitude: float = 1` - Initial wave amplitude
 - `period: float = <varies by wave>` - Period of wave
 - `offsets: Tuple(float [x], float [y]) = (0, 0)` - X- and Y- offsets of the wave
-- `decay_constant: float = 0` - If nonzero, function will decay according to `e^(-<decay>x)wavefunc(x)`
+- `decay_constant: float = 0` - If nonzero, function will decay according to `e^(-<decay>x)wavefunc(x)`. Trig functions only.
 - `resolution: int = 500` - Number of x-values that will be generated upon graphing.
 
 ## Wave operators

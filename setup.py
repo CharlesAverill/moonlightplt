@@ -1,6 +1,6 @@
 import setuptools
 
-version = "0.1.0"
+version = "0.1.1"
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -12,7 +12,7 @@ setuptools.setup(
     author_email="charlesaverill20@gmail.com",
     description="Matplotlib wave plotting and animation made easy",
     long_description=long_description,
-    install_requires=['matplotlib>=3.1', 'numpy>=1.19'],
+    install_requires=['matplotlib>=3.1', 'numpy>=1.18', 'scipy>=1.5.2'],
     long_description_content_type="text/markdown",
     url="https://github.com/CharlesAverill/moonlight/",
     packages=setuptools.find_packages(),

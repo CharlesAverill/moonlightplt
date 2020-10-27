@@ -6,6 +6,7 @@ from matplotlib.animation import FuncAnimation
 class Animator:
     def __init__(self, amplitude, default_speed, x_func, y_func, x_args, y_args):
         self.func = None
+        self.fig, self.ax = None, None
         self.amplitude = amplitude
         self.default_speed = default_speed
         self.line = None
@@ -16,10 +17,11 @@ class Animator:
 
     def animate(self,
                 speed: float = 1,
-                line_width: float = 1):
+                line_width: float = 1,
+                framerate: float = 17):
 
         speed *= self.default_speed
-        self.fig = plt.figure()
+        self.fig = plt.gcf()
         self.ax = plt.gca()
         self.ax.set_ylim([-self.amplitude, self.amplitude])
 
@@ -49,6 +51,6 @@ class Animator:
             return self.line,
 
         anim = FuncAnimation(self.fig, update, init_func=init,
-                             interval=17, blit=True)
+                             interval=framerate, blit=True)
 
         plt.show()

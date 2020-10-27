@@ -61,8 +61,9 @@ class Wave:
 
     def animate(self,
                 speed: float = 1,
-                line_width: float = 1):
-        self.anim.animate(speed, line_width)
+                line_width: float = 1,
+                framerate: float = 17):
+        self.anim.animate(speed, line_width, framerate)
 
     def __add__(self, other):
         if _check_type(other):

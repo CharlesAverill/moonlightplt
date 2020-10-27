@@ -39,6 +39,7 @@ so that animation can be seen easily.
     a `Sine` or `Cosine` wave, the sum of the functions naturally grows at an incredibly slow rate, so `speed`
     should be set to a multiple of `10**14` to be able to view animations properly.
 - `line_width` - Sets line width
+- `framerate` - Measured in ms, this is the time gap between two frames being displayed. Default is 17ms or ~60fps.
 
 
 ## Supported Waves

@@ -1,12 +1,12 @@
 import setuptools
 
-version = "0.2.1"
+version = "0.2.2"
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='moonlight',
+    name='moonlightplt',
     version=version,
     author="Charles Averill",
     author_email="charlesaverill20@gmail.com",
@@ -14,7 +14,7 @@ setuptools.setup(
     long_description=long_description,
     install_requires=["matplotlib", "numpy", "scipy"],
     long_description_content_type="text/markdown",
-    url="https://github.com/CharlesAverill/moonlight/",
+    url="https://github.com/CharlesAverill/moonlightplt/",
     packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[

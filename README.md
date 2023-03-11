@@ -2,17 +2,17 @@
 Matplotlib wave plotting and animation made easy
 
 ## Installation
-- For pip release - `pip install moonlight`
+- For pip release - `pip install moonlightplt`
 - For source build - 
 ```bash
-git clone https://github.com/CharlesAverill/moonlight.git moonlight
-cd moonlight
+git clone https://github.com/CharlesAverill/moonlightplt.git moonlightplt
+cd moonlightplt
 python setup.py install
 ```
 
 ## Usage
 ```python
-from moonlight import waves, utils
+from moonlightplt import waves, utils
 
 # Create a damped Sine wave with amplitude, period 2
 sine = waves.Sine(amplitude=2, period=2,
@@ -28,7 +28,7 @@ utils.center_axes()
 # Plot 2 periods of the wave (static)
 sine.plot(2)
 ```
-![Resulting plot](https://raw.githubusercontent.com/CharlesAverill/moonlight/main/media/readme_sine_wave.png)
+![Resulting plot](https://raw.githubusercontent.com/CharlesAverill/moonlightplt/main/media/readme_sine_wave.png)
 
 ### Animation
 Waves can also be animated! Just replace `<wave_object>.plot()` with `<wave_object>.animate()`!
@@ -61,7 +61,7 @@ inheriting this class.
 ## Wave operators
 Waves can be operated on by each other and by scalar values.
 ```python
-from moonlight.waves import Sine
+from moonlightplt.waves import Sine
 
 s1 = Sine()
 s2 = Sine(amplitude=2)
